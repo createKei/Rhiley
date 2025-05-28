@@ -17,59 +17,60 @@ const categories = [
 const galleryImages = [
   {
     id: 1,
-    src: '/pictures/_DSC7855.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/_DSC7855.jpg`,
     alt: 'Wedding couple',
     category: 'wedding'
   },
   {
     id: 2,
-    src: '/pictures/portrait.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/portrait.jpg`,
     alt: 'Portrait session',
     category: 'portrait'
   },
   {
     id: 3,
-    src: '/pictures/_DSC6607.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/_DSC6607.jpg`,
     alt: 'Music event',
     category: 'event'
   },
   {
     id: 4,
-    src: '/pictures/_DSC7338.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/_DSC7338.jpg`,
     alt: 'Music',
     category: 'creative'
   },
   {
     id: 5,
-    src: '/pictures/_DSC7953.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/_DSC7953.jpg`,
     alt: 'Wedding ceremony',
     category: 'wedding'
   },
   {
     id: 6,
-    src: '/pictures/bike.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/bike.jpg`,
     alt: 'Portrait session',
     category: 'portrait'
   },
   {
     id: 7,
-    src: '/pictures/_DSC5090.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/_DSC5090.jpg`,
     alt: 'Family portrait',
     category: 'family'
   },
   {
     id: 8,
-    src: '/pictures/reighandivorce4.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/reighandivorce4.jpg`,
     alt: 'Special event',
     category: 'event'
   },
   {
     id: 9,
-    src: '/pictures/_DSC7329.jpg',
+    src: `${import.meta.env.BASE_URL}pictures/_DSC7329.jpg`,
     alt: 'Music event',
     category: 'event'
   }
 ];
+
 
 
 const Gallery: React.FC<GalleryProps> = ({ preview = false }) => {
