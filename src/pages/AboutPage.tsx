@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
             >
               <div className="w-full h-[600px] relative z-10">
              <img 
-              src="/pictures/profile.jpg" 
+              src="/Rhiley/pictures/profile.jpg" 
               alt="Rhiley Boutron" 
               className="w-full h-full object-cover"
   />
