@@ -18,7 +18,7 @@ const categories = [
 const galleryImages = [
   {
     id: 1,
-    src: '/pictures/Wedding1.jpg',
+    src: '/Rhiley/pictures/Wedding1.jpg',
     alt: 'Wedding couple',
     category: 'wedding'
   },
@@ -30,19 +30,19 @@ const galleryImages = [
   },
   {
     id: 3,
-    src: '/pictures/music.jpg',
+    src: '/Rhiley/pictures/music.jpg',
     alt: 'Music event',
     category: 'event'
   },
   {
     id: 4,
-    src: '/pictures/guitar.jpg',
+    src: '/Rhiley/pictures/guitar.jpg',
     alt: 'Music',
     category: 'creative'
   },
   {
     id: 5,
-    src: '/pictures/wedding2.jpg',
+    src: '/Rhiley/pictures/wedding2.jpg',
     alt: 'Wedding ceremony',
     category: 'wedding'
   },
@@ -54,7 +54,7 @@ const galleryImages = [
   },
   {
     id: 7,
-    src: '/pictures/_DSC5090.jpg',
+    src: '/Rhiley/pictures/_DSC5090.jpg',
     alt: 'Family portrait',
     category: 'family'
   },
@@ -66,7 +66,7 @@ const galleryImages = [
   },
   {
     id: 9,
-    src: '/pictures/_DSC7329.jpg',
+    src: '/Rhiley/pictures/_DSC7329.jpg',
     alt: 'Music event',
     category: 'event'
   }
