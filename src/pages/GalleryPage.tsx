@@ -10,7 +10,7 @@ const GalleryPage: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center z-0" 
-          style={{ backgroundImage: "url('/pictures/_DSC2801.jpg')" }}
+          style={{ backgroundImage: "url('/public/pictures/_DSC2801.jpg')" }}
         ></div>
         
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
