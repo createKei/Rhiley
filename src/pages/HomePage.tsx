@@ -130,17 +130,17 @@ const HomePage: React.FC = () => {
             {[
               {
                 title: "Weddings",
-                img: "/pictures/wedding.jpg",
+                img: `${import.meta.env.BASE_URL}pictures/wedding.jpg`,
                 description: "Capturing your special day with elegance and emotion."
               },
               {
                 title: "Portraits",
-                image: "/public/pictures/_DSC6756.jpg",
+                image: `${import.meta.env.BASE_URL}pictures/_DSC6756.jpg`,
                 description: "Professional portraits that showcase your personality."
               },
               {
                 title: "Family",
-                image: "/pictures/_DSC5173.jpg",
+                image: `${import.meta.env.BASE_URL}pictures/_DSC5173.jpg`,
                 description: "Preserving family moments and connections for generations."
               }
             ].map((service, index) => (
