@@ -5,7 +5,7 @@ interface GalleryProps {
   preview?: boolean;
 }
 
-// Gallery images
+// カテゴリー一覧
 const categories = [
   { id: 'all', name: 'All' },
   { id: 'wedding', name: 'Wedding' },
@@ -14,89 +14,94 @@ const categories = [
   { id: 'event', name: 'Event' }
 ];
 
+// ギャラリー画像一覧（画像パスはベタ書きで）
 const galleryImages = [
   {
     id: 1,
-    src: `${import.meta.env.BASE_URL}pictures/_DSC7855.jpg`,
+    src: '/pictures/_DSC7855.jpg',
     alt: 'Wedding couple',
     category: 'wedding'
   },
   {
     id: 2,
-    src: `${import.meta.env.BASE_URL}pictures/portrait.jpg`,
+    src: '/pictures/portrait.jpg',
     alt: 'Portrait session',
     category: 'portrait'
   },
   {
     id: 3,
-    src: `${import.meta.env.BASE_URL}pictures/_DSC6607.jpg`,
+    src: '/pictures/_DSC6607.jpg',
     alt: 'Music event',
     category: 'event'
   },
   {
     id: 4,
-    src: `${import.meta.env.BASE_URL}pictures/_DSC7338.jpg`,
+    src: '/pictures/_DSC7338.jpg',
     alt: 'Music',
     category: 'creative'
   },
   {
     id: 5,
-    src: `${import.meta.env.BASE_URL}pictures/_DSC7953.jpg`,
+    src: '/pictures/_DSC7953.jpg',
     alt: 'Wedding ceremony',
     category: 'wedding'
   },
   {
     id: 6,
-    src: `${import.meta.env.BASE_URL}pictures/bike.jpg`,
+    src: '/pictures/bike.jpg',
     alt: 'Portrait session',
     category: 'portrait'
   },
   {
     id: 7,
-    src: `${import.meta.env.BASE_URL}pictures/_DSC5090.jpg`,
+    src: '/pictures/_DSC5090.jpg',
     alt: 'Family portrait',
     category: 'family'
   },
   {
     id: 8,
-    src: `${import.meta.env.BASE_URL}pictures/reighandivorce4.jpg`,
+    src: '/pictures/reighandivorce4.jpg',
     alt: 'Special event',
     category: 'event'
   },
   {
     id: 9,
-    src: `${import.meta.env.BASE_URL}pictures/_DSC7329.jpg`,
+    src: '/pictures/_DSC7329.jpg',
     alt: 'Music event',
     category: 'event'
   }
 ];
 
-
-
 const Gallery: React.FC<GalleryProps> = ({ preview = false }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
+  // カテゴリー選択時
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId);
   };
 
+  // 選択中のカテゴリーで画像をフィルタリング
   const filteredImages = selectedCategory === 'all' 
     ? galleryImages 
     : galleryImages.filter(img => img.category === selectedCategory);
 
+  // プレビューの場合は最大6枚まで表示
   const displayImages = preview ? filteredImages.slice(0, 6) : filteredImages;
 
+  // 画像クリックでライトボックスを開く
   const openLightbox = (id: number) => {
     setSelectedImage(id);
   };
 
+  // ライトボックス閉じる
   const closeLightbox = () => {
     setSelectedImage(null);
   };
 
   return (
     <div>
+      {/* カテゴリー選択ボタン（プレビューでは非表示） */}
       {!preview && (
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           {categories.map(category => (
@@ -115,6 +120,7 @@ const Gallery: React.FC<GalleryProps> = ({ preview = false }) => {
         </div>
       )}
 
+      {/* ギャラリーグリッド */}
       <motion.div 
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         initial={{ opacity: 0 }}
@@ -146,7 +152,7 @@ const Gallery: React.FC<GalleryProps> = ({ preview = false }) => {
         ))}
       </motion.div>
 
-      {/* Lightbox */}
+      {/* ライトボックス */}
       {selectedImage && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
@@ -155,7 +161,10 @@ const Gallery: React.FC<GalleryProps> = ({ preview = false }) => {
           <div className="relative max-w-5xl max-h-full">
             <button 
               className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2"
-              onClick={closeLightbox}
+              onClick={(e) => {
+                e.stopPropagation(); // クリックのバブリングを防ぐ
+                closeLightbox();
+              }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
