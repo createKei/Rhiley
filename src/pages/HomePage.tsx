@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
             {[
               {
                 title: "Weddings",
-                src: `${import.meta.env.BASE_URL}pictures/Wedding1.jpg`,
+                src: `${import.meta.env.BASE_URL}pictures/wedding.jpg`,
                 description: "Capturing your special day with elegance and emotion."
               },
               {

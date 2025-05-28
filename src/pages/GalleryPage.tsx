@@ -19,7 +19,7 @@ const categories = [
 const galleryImages = [
   {
     id: 1,
-    src: `${import.meta.env.BASE_URL}pictures/Wedding1.jpg`,
+    src: `${import.meta.env.BASE_URL}pictures/wedding.jpg`,
     alt: 'Wedding couple',
     category: 'wedding',
   },
