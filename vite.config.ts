@@ -1,14 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  base: '/rhiley.profile/', // ← GitHub Pages のパスを追加
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/Rhiley/' : '/',
   build: {
-    outDir: 'docs', // ← 出力先を docs に（GitHub Pages 用）
+    outDir: 'docs',
   },
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
-});
+}));
