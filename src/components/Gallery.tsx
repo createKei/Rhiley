@@ -18,59 +18,60 @@ const categories = [
 const galleryImages = [
   {
     id: 1,
-    src: '/Rhiley/pictures/Wedding1.jpg',
+    src: '/pictures/Wedding1.jpg',
     alt: 'Wedding couple',
     category: 'wedding'
   },
   {
     id: 2,
-    src: '/Rhiley/pictures/portrait.jpg',
+    src: '/pictures/portrait.jpg',
     alt: 'Portrait session',
     category: 'portrait'
   },
   {
     id: 3,
-    src: '/Rhiley/pictures/_DSC6607.jpg',
+    src: '/pictures/music.jpg',
     alt: 'Music event',
     category: 'event'
   },
   {
     id: 4,
-    src: '/Rhiley/pictures/_DSC7338.jpg',
+    src: '/pictures/guitar.jpg',
     alt: 'Music',
     category: 'creative'
   },
   {
     id: 5,
-    src: '/Rhiley/pictures/_DSC7953.jpg',
+    src: '/pictures/wedding2.jpg',
     alt: 'Wedding ceremony',
     category: 'wedding'
   },
   {
     id: 6,
-    src: '/Rhiley/pictures/bike.jpg',
+    src: '/pictures/bike.jpg',
     alt: 'Portrait session',
     category: 'portrait'
   },
   {
     id: 7,
-    src: '/Rhiley/pictures/_DSC5090.jpg',
+    src: '/pictures/_DSC5090.jpg',
     alt: 'Family portrait',
     category: 'family'
   },
   {
     id: 8,
-    src: '/Rhiley/pictures/reighandivorce4.jpg',
+    src: '/pictures/reighandivorce4.jpg',
     alt: 'Special event',
     category: 'event'
   },
   {
     id: 9,
-    src: '/Rhiley/pictures/_DSC7329.jpg',
+    src: '/pictures/_DSC7329.jpg',
     alt: 'Music event',
     category: 'event'
   }
 ];
+
 
 const Gallery: React.FC<GalleryProps> = ({ preview = false }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
