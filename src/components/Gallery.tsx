@@ -18,7 +18,7 @@ const categories = [
 const galleryImages = [
   {
     id: 1,
-    src: '/Rhiley/pictures/_DSC7855.jpg',
+    src: '/Rhiley/pictures/Wedding1.jpg',
     alt: 'Wedding couple',
     category: 'wedding'
   },
