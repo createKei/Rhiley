@@ -55,7 +55,7 @@ const galleryImages = [
   },
   {
     id: 7,
-    src: `${import.meta.env.BASE_URL}pictures/_DSC5090.jpg`,
+    src: `${import.meta.env.BASE_URL}pictures/_DSC5162.jpg`,
     alt: 'Family portrait',
     category: 'family',
   },
