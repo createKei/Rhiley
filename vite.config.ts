@@ -6,16 +6,14 @@ export default defineConfig(({ mode }) => ({
   base: mode === 'production' ? '/Rhiley/' : '/',
   build: {
     outDir: 'docs',
-    rollupOptions: {
-      plugins: [
-        copy({
-          targets: [
-            { src: 'public/pictures', dest: 'docs' }  // public/pictures → docs/pictures にコピー
-          ],
-          hook: 'writeBundle' // 書き出し完了後に実行
-        })
-      ]
-    }
   },
-  plugins: [react()],
+  plugins: [
+    react(),
+    copy({
+      targets: [
+        { src: 'public/pictures/*', dest: 'docs/pictures' }
+      ],
+      hook: 'writeBundle'
+    })
+  ]
 }));
