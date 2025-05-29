@@ -137,7 +137,7 @@ const HomePage: React.FC = () => {
               },
               {
                 title: "Portraits",
-                img: `${base}pictures/reighandivorce1.jpg`,
+                img: `${import.meta.env.BASE_URL}pictures/reighandivorce1.jpg`,
                 description: "Professional portraits that showcase your personality."
               },
               {
