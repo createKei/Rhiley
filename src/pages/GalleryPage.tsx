@@ -15,7 +15,7 @@ const categories = [
   { id: 'creative', name: 'Creative' },
 ];
 
-// 画像データ（import.meta.env.BASE_URLを使う）
+// 画像データ
 const galleryImages = [
   {
     id: 1,
@@ -98,6 +98,29 @@ const Gallery: React.FC<GalleryProps> = ({ preview = false }) => {
 
   return (
     <div>
+      {/* Hero Section */}
+      <section className="relative h-[50vh] mb-12">
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{ backgroundImage: "url('/pictures/_DSC2801.jpg')" }}
+        ></div>
+
+        <div className="container mx-auto px-4 h-full flex items-center relative z-20">
+          <motion.div
+            className="text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="font-serif text-4xl md:text-5xl font-light mb-4">Gallery</h1>
+            <p className="text-lg max-w-xl">
+              Explore moments I’ve captured across different styles and stories.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {!preview && (
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           {categories.map((category) => (
