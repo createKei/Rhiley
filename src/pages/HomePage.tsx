@@ -142,7 +142,7 @@ const HomePage: React.FC = () => {
               },
               {
                 title: "Family",
-                img: `${import.meta.env.BASE_URL}pictures/familyportrait.jpg`,
+                img: `${base}pictures/familyportrait.jpg`,
                 description: "Preserving family moments and connections for generations."
               }
             ].map((service, index) => (
