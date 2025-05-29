@@ -7,7 +7,7 @@ const ServicesPage: React.FC = () => {
     {
       id: 'portraits',
       title: 'Portrait Photography',
-      image: '/public/pictures/_DSC6756.jpg',
+      image: `${import.meta.env.BASE_URL}pictures/_DSC6756.jpg`,
       description: 'Professional portrait sessions tailored to capture your unique personality and style.',
       packages: [
         {
@@ -36,7 +36,7 @@ const ServicesPage: React.FC = () => {
     {
       id: 'maternity',
       title: 'Maternity Photography',
-      src: `${import.meta.env.BASE_URL}pictures/_DSC4696 (2).jpg`,
+      image: `${import.meta.env.BASE_URL}pictures/_DSC4696-2.jpg`,
       description: 'Beautiful maternity sessions to capture this special time in your life.',
       packages: [
         {
@@ -56,7 +56,7 @@ const ServicesPage: React.FC = () => {
     {
       id: 'events',
       title: 'Event Photography',
-      src: `${import.meta.env.BASE_URL}pictures/IMG_20241023_225618027_HDR.jpg`,
+      image: `${import.meta.env.BASE_URL}pictures/IMG_20241023_225618027_HDR.jpg`,
       description: 'Comprehensive coverage for your special events and celebrations.',
       packages: [
         {
@@ -76,7 +76,7 @@ const ServicesPage: React.FC = () => {
     {
       id: 'wedding',
       title: 'Wedding Photography',
-      src: `${import.meta.env.BASE_URL}pictures/_DSC7929.jpg`,
+      image: `${import.meta.env.BASE_URL}pictures/_DSC7929.jpg`,
       description: 'Comprehensive wedding photography packages designed to capture every precious moment of your special day.',
       packages: [
         {
