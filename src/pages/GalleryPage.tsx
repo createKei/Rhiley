@@ -67,7 +67,7 @@ const galleryImages = [
   },
   {
     id: 9,
-    src: `${import.meta.env.BASE_URL}pictures/_DSC7329.jpg`,
+    src: '/pictures/event.jpg',
     alt: 'Music event',
     category: 'event',
   },
