@@ -126,7 +126,6 @@ const ServicesPage: React.FC = () => {
           className="absolute inset-0 bg-cover bg-center z-0" 
           style={{ backgroundImage: "url('https://images.pexels.com/photos/3760585/pexels-photo-3760585.jpeg?auto=compress&cs=tinysrgb&w=1920')" }}
         ></div>
-        
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
           <motion.div 
             className="text-white"
@@ -182,7 +181,6 @@ const ServicesPage: React.FC = () => {
                     <p className="text-neutral-700 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
                     <div className="space-y-6 mt-8">
                       {service.packages.map((pkg, pkgIndex) => (
                         <motion.div 
@@ -219,7 +217,6 @@ const ServicesPage: React.FC = () => {
                       ))}
                     </div>
                   </motion.div>
-                  
                   <motion.div 
                     className="order-2"
                     initial={{ opacity: 0, x: 20 }}
