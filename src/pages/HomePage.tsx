@@ -137,7 +137,7 @@ const HomePage: React.FC = () => {
               },
               {
                 title: "Portraits",
-                img: `${import.meta.env.BASE_URL}pictures/reighandivorce1.jpg`,
+                img: `${base}pictures/reighandivorce1.jpg`,
                 description: "Professional portraits that showcase your personality."
               },
               {
@@ -159,6 +159,7 @@ const HomePage: React.FC = () => {
                     src={service.img}
                     alt={service.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={service.title === "Portraits" ? { objectPosition: 'center 70%' } : undefined}
                   />
                 </div>
                 <div className="p-6">
