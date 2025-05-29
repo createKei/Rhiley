@@ -137,12 +137,12 @@ const HomePage: React.FC = () => {
               },
               {
                 title: "Portraits",
-                img: `${base}pictures/reighandivorce1.jpg`,
+                img: `${import.meta.env.BASE_URL}pictures/reighandivorce1.jpg`,
                 description: "Professional portraits that showcase your personality."
               },
               {
                 title: "Family",
-                img: `${base}pictures/_DSC5173.jpg`,
+                img: `${import.meta.env.BASE_URL}pictures/_DSC5173.jpg.jpg`,
                 description: "Preserving family moments and connections for generations."
               }
             ].map((service, index) => (
@@ -159,7 +159,6 @@ const HomePage: React.FC = () => {
                     src={service.img}
                     alt={service.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={service.title === "Portraits" ? { objectPosition: 'center 70%' } : undefined}
                   />
                 </div>
                 <div className="p-6">
