@@ -6,25 +6,27 @@ import Gallery from '../components/Gallery';
 import TestimonialSlider from '../components/TestimonialSlider';
 
 const HomePage: React.FC = () => {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center z-0" 
-          style={{ backgroundImage: "url('/Rhiley/pictures/reighandivorce2.jpg')" }}
+        <div
+          className="absolute inset-0 bg-cover bg-center z-0"
+          style={{ backgroundImage: `url('${base}pictures/reighandivorce2.jpg')` }}
         ></div>
 
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
-          <motion.div 
+          <motion.div
             className="max-w-2xl text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6">
-              Capturing life's <br />beautiful moments
+              Capturing life's <br /> beautiful moments
             </h1>
             <p className="text-lg md:text-xl font-light max-w-lg mb-8">
               Professional photography services for weddings, portraits, family sessions and special events.
@@ -66,16 +68,16 @@ const HomePage: React.FC = () => {
               </motion.div>
             </div>
             <div className="order-1 md:order-2">
-              <motion.div 
+              <motion.div
                 className="relative h-[500px] w-full overflow-hidden"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <img 
-                  src="/Rhiley/pictures/profile.jpg" 
-                  alt="Rhiley Boutron Portrait" 
+                <img
+                  src={`${base}pictures/profile.jpg`}
+                  alt="Rhiley Boutron Portrait"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -130,21 +132,21 @@ const HomePage: React.FC = () => {
             {[
               {
                 title: "Weddings",
-                img: `${import.meta.env.BASE_URL}pictures/wedding.jpg`,
+                img: `${base}pictures/wedding.jpg`,
                 description: "Capturing your special day with elegance and emotion."
               },
               {
                 title: "Portraits",
-                image: `${import.meta.env.BASE_URL}pictures/_DSC6756.jpg`,
+                img: `${base}pictures/_DSC6756.jpg`,
                 description: "Professional portraits that showcase your personality."
               },
               {
                 title: "Family",
-                image: `${import.meta.env.BASE_URL}pictures/_DSC5173.jpg`,
+                img: `${base}pictures/_DSC5173.jpg`,
                 description: "Preserving family moments and connections for generations."
               }
             ].map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="bg-white shadow-sm overflow-hidden group"
                 initial={{ opacity: 0, y: 20 }}
@@ -153,9 +155,9 @@ const HomePage: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="h-64 overflow-hidden">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
+                  <img
+                    src={service.img}
+                    alt={service.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
