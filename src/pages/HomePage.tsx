@@ -6,8 +6,6 @@ import Gallery from '../components/Gallery';
 import TestimonialSlider from '../components/TestimonialSlider';
 
 const HomePage: React.FC = () => {
-  const base = import.meta.env.BASE_URL;
-
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -15,7 +13,9 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
-          style={{ backgroundImage: `url('${base}pictures/reighandivorce2.jpg')` }}
+          style={{
+            backgroundImage: `url('${import.meta.env.BASE_URL}pictures/reighandivorce2.jpg')`
+          }}
         ></div>
 
         <div className="container mx-auto px-4 h-full flex items-center relative z-20">
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
                 transition={{ duration: 0.6 }}
               >
                 <img
-                  src={`${base}pictures/profile.jpg`}
+                  src={`${import.meta.env.BASE_URL}pictures/profile.jpg`}
                   alt="Rhiley Boutron Portrait"
                   className="w-full h-full object-cover"
                 />
@@ -132,7 +132,7 @@ const HomePage: React.FC = () => {
             {[
               {
                 title: "Weddings",
-                img: `${base}pictures/wedding.jpg`,
+                img: `${import.meta.env.BASE_URL}pictures/wedding.jpg`,
                 description: "Capturing your special day with elegance and emotion."
               },
               {
@@ -142,7 +142,7 @@ const HomePage: React.FC = () => {
               },
               {
                 title: "Family",
-                img: `${base}pictures/DSC5173.jpg`,
+                img: `${import.meta.env.BASE_URL}pictures/DSC5173.jpg`,
                 description: "Preserving family moments and connections for generations."
               }
             ].map((service, index) => (

@@ -7,6 +7,7 @@ const ServicesPage: React.FC = () => {
     {
       id: 'portraits',
       title: 'Portrait Photography',
+      image: `${import.meta.env.BASE_URL}pictures/_DSC6756.jpg`,
       description: 'Professional portrait sessions tailored to capture your unique personality and style.',
       packages: [
         {
@@ -35,6 +36,7 @@ const ServicesPage: React.FC = () => {
     {
       id: 'maternity',
       title: 'Maternity Photography',
+      image: `${import.meta.env.BASE_URL}pictures/_DSC4696-2.jpg`,
       description: 'Beautiful maternity sessions to capture this special time in your life.',
       packages: [
         {
@@ -54,6 +56,7 @@ const ServicesPage: React.FC = () => {
     {
       id: 'events',
       title: 'Event Photography',
+      image: `${import.meta.env.BASE_URL}pictures/IMG_20241023_225618027_HDR.jpg`,
       description: 'Comprehensive coverage for your special events and celebrations.',
       packages: [
         {
@@ -73,6 +76,7 @@ const ServicesPage: React.FC = () => {
     {
       id: 'wedding',
       title: 'Wedding Photography',
+      image: `${import.meta.env.BASE_URL}pictures/_DSC7929.jpg`,
       description: 'Comprehensive wedding photography packages designed to capture every precious moment of your special day.',
       packages: [
         {
@@ -165,8 +169,9 @@ const ServicesPage: React.FC = () => {
           <div className="space-y-24">
             {services.map((service, index) => (
               <div key={service.id} id={service.id} className="scroll-mt-20">
-                <div className="grid grid-cols-1 gap-12 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <motion.div
+                    className="order-1"
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -210,6 +215,21 @@ const ServicesPage: React.FC = () => {
                           </div>
                         </motion.div>
                       ))}
+                    </div>
+                  </motion.div>
+                  <motion.div 
+                    className="order-2"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <div className="h-[500px] overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </motion.div>
                 </div>
